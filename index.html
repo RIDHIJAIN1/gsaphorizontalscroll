@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="firstContainer">    
+        <!-- <h1>Testing horizontal scrolling w/ three sections</h1>
+        <h2>First Container</h2> -->
+        <div class="parentContainer">
+            <h3>Hi I am a horizontal scroller.
+            </h3>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    
+      <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+      <script >
+  gsap.registerPlugin(ScrollTrigger);
+
+        let t1 = gsap.timeline({
+            scrollTrigger:{
+                trigger: '.parentContainer',
+                start:'top center',
+                end: 'bottom center',
+                scrub: true,
+                // pin: true,
+                // pinSpacing: false,
+                markers:true,
+
+            }
+        });
+
+
+
+
+        t1.to( '.parentContainer',{
+              x:400,
+              duration:5
+        });
+
+
+
+        const lenis = new Lenis()
+
+       lenis.on('scroll', (e) => {
+       console.log(e)
+       })
+
+         function raf(time) {
+         lenis.raf(time)
+         requestAnimationFrame(raf)
+     }
+
+        requestAnimationFrame(raf)
+      </script>
+</body>
+</html>

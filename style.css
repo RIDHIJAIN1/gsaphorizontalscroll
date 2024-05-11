@@ -1,0 +1,45 @@
+/* html {
+    overflow-y: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+  body {
+    overflow-y: visible;
+    position: relative;
+    height: unset;
+  }
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
+  } */
+/*   
+  .container {
+    width: 400%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+  } */
+  
+  .firstContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    background: yellow;
+  }
+  
+  .parentContainer {
+    display: flex;
+    height: 10vh;
+    padding: 20px;
+    background: rgb(0, 255, 174);
+    position: relative;
+    /* left: -400px; */
+  }
+
+  .spacer{
+    height: 900px;
+    background-color: aqua;
+  }
